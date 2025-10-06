@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our Little Universe</title>
+  <meta name="description" content="Untuk Mega — Our Little Universe" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- RETRO LOADING -->
+  <div class="loading-wrap" id="loading">
+    <div class="loading-box">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="win95-badge">95</div>
+          <div>
+            <div class="win95-title">WINDOWS 95</div>
+            <div class="loading-text">LOADING...</div>
+          </div>
+        </div>
+        <div class="progress" aria-hidden="true">
+          <i id="bar" style="width:0%"></i>
+        </div>
+        <div class="subtext">Please wait...</div>
+      </div>
+      <div class="footer-note">our-little-universe — retro loader</div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="wrap" id="wrap" aria-hidden="true">
+    <div class="card" id="card">
+      <header>
+        <div class="avatar">M&amp;A</div>
+        <div>
+          <h1>Our Little Universe</h1>
+          <div class="lead">Selamat anniversary pertama — ini buat Mega. Klik foto, main game, dan baca pesan spesial.</div>
+        </div>
+        <div style="margin-left:auto;color:var(--muted)"><small id="date"></small></div>
+      </header>
+
+      <div class="content">
+        <div class="left">
+          <div class="section">
+            <h3>Galeri Polaroid</h3>
+            <div class="polaroid-grid" id="grid">
+              <div class="polaroid t1" data-caption="Momen 1">
+                <img src="https://drive.google.com/uc?export=view&id=1nD5kGnO01_UK5lySwJ2mLxCY3NuGq6mp" alt="p1">
+                <div class="caption">Momen 1</div>
+              </div>
+              <div class="polaroid t2" data-caption="Momen 2">
+                <img src="https://drive.google.com/uc?export=view&id=1RKf8xFBAZwou6creEL7hI3kvXqZn83h3" alt="p2">
+                <div class="caption">Momen 2</div>
+              </div>
+              <div class="polaroid t3" data-caption="Momen 3">
+                <img src="https://drive.google.com/uc?export=view&id=1CmHKyWdODUsUx4RHL1wLUaTT_6lus8uz" alt="p3">
+                <div class="caption">Momen 3</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Sesi Pertanyaan (Quiz Lucu)</h3>
+            <div class="quiz" id="quiz">
+              <div id="qtext" class="qtext">Siapa yang paling sering nonton film berdua?</div>
+              <div class="option" data-correct="true">Kita berdua</div>
+              <div class="option" data-correct="false">Mega</div>
+              <div class="option" data-correct="false">Lo</div>
+              <div class="hint"><small id="qhint"></small></div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Mini Game: Kasih Makan Toothless</h3>
+            <p class="muted">Klik ikan sampai skor 10 untuk unlock pesan spesial.</p>
+            <div class="game-row">
+              <div id="toothlessBox" class="toothlessBox">
+                <div class="toothless-emoji">🐉</div>
+                <div class="toothless-label">Toothless</div>
+              </div>
+              <div class="game-controls">
+                <button class="btn btn-glow" id="feedBtn">🫗 Kasih Ikan</button>
+                <div class="muted">Skor: <span id="score">0</span>/10</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <aside class="right">
+          <div class="theme-box">
+            <div class="sparkle">✨</div>
+            <div>
+              <div class="theme-title">Toothless Theme</div>
+              <div class="muted small">Malam penuh bintang & kenangan.</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Musik</h3>
+            <div class="music-control">
+              <button class="btn btn-pink" id="playAudio">Play</button>
+              <button class="btn" id="stopAudio">Stop</button>
+            </div>
+            <small class="muted">Loop: on — gunakan tombol play/pause jika perlu</small>
+          </div>
+
+          <div class="section">
+            <h3>Pesan Spesial</h3>
+            <div id="previewMsg" class="message">
+              <strong>Pesan spesial:</strong><br>
+              Gue sayang banget sama lo selama setahun terakhir — makasih udah sabar, nemenin, dan jalanin semua bareng-bareng. Doa terbaik buat kita di anniversary pertama ini. ❤️
+            </div>
+            <div class="actions">
+              <button class="btn btn-glow" id="openGift">Buka Hadiah</button>
+              <button class="btn" id="downloadBtn">Unduh HTML</button>
+            </div>
+          </div>
+
+          <div class="small muted">Versi: Retro + Toothless — sesuaikan foto & audio sesuai kebutuhan.</div>
+        </aside>
+      </div>
+
+      <footer> Dibuat khusus untuk Mega — Dengan cinta dari lo ❤️ </footer>
+
+      <div class="stars" id="stars"></div>
+    </div>
+  </div>
+
+  <div class="viewer" id="viewer" aria-hidden="true">
+    <div>
+      <img id="viewerImg" src="" alt="">
+      <div id="viewerCaption" class="info"></div>
+      <div style="margin-top:12px"><button class="btn btn-pink" id="closeViewer">Tutup</button></div>
+    </div>
+  </div>
+
+  <div class="viewer" id="giftModal" style="background:rgba(2,6,10,0.7);">
+    <div style="text-align:center;color:#cfeff3">
+      <div style="font-size:20px;font-weight:700">Hadiah Spesial</div>
+      <div style="margin-top:8px">Kode: <span id="giftCode">MEGA-ANNIV-2025</span></div>
+      <div style="margin-top:10px"><button class="btn btn-pink" id="closeGiftModal">Tutup</button></div>
+    </div>
+  </div>
+
+  <audio id="bgMusic" src="audio/wefellinloveinoctober.mp3" loop></audio>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
